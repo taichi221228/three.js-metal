@@ -1,4 +1,4 @@
-import { PerspectiveCamera, Scene, WebGLRenderer } from "three";
+import { Clock, PerspectiveCamera, Scene, WebGLRenderer } from "three";
 
 export function setup() {
 	const size = { width: 1252, height: 864 };
@@ -14,7 +14,9 @@ export function setup() {
 	const camera = new PerspectiveCamera(60, size.width / size.height, 0.1, 100);
 	camera.position.set(0, 0, 8);
 
-	return { camera, renderer, scene, size };
+	const clock = new Clock();
+
+	return { camera, clock, renderer, scene, size };
 }
 
 function getCanvasElement() {
