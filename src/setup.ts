@@ -7,7 +7,7 @@ export function setup() {
 		canvas: getCanvasElement(),
 	});
 	renderer.setSize(size.width, size.height);
-	renderer.setClearColor(0xccc);
+	renderer.setClearColor(0x6d8196);
 
 	const scene = new Scene();
 
